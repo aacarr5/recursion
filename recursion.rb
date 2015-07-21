@@ -17,7 +17,7 @@ class Game
 	def play_game
 		validate_move(gets_move)
 		create_board(board)
-		print_board
+		p print_board
 	end
 
 	def gets_move
@@ -37,13 +37,13 @@ class Game
 	def move_to_position(input)
 		# binding.pry
 		if input == "D"
-			gets_move unless position[:x] < board[0].length
+			gets_move if position[:x] >= board.first.length - 1
 			position[:x]+=1
 		end
 	end
 
 	def print_board
-		board.each {|line| p line}
+		board.each {|line| line}
 	end
 
 	# def update_board
