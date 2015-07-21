@@ -31,6 +31,12 @@ class Game
 			puts "Sorry, please choose a valid position" 
 			gets_move
 		end
+
+		if move == "A"
+			gets_move if position[:x] - 1 < 0
+		elsif move == "D"
+			gets_move if position[:x] + 1 > board.first.length
+		end
 		move_to_position(move)
 	end
 
