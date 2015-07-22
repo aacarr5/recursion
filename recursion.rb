@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 
 class Game
 
@@ -10,7 +10,7 @@ class Game
 	end
 
 	def create_board(board)
-		board[position[:x]] = "X"
+		board[position[:y]][position[:x]] = "X"
 		board
 	end
 
@@ -76,6 +76,5 @@ class Game
 
 end
 
-a = Game.new([" "," "," "," "]
-			 [" "," "," ","$"])
-a.play_game
+a = Game.new(([" "," "," "," "],[" "," "," ","$"]))
+# a.play_game
